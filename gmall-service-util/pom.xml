@@ -9,7 +9,9 @@
         <groupId>com.atguigu.gmall</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <artifactId>gmall-service-util</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.atguigu.gmall</groupId>
