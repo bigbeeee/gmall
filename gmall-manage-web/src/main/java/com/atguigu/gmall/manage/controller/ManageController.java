@@ -83,4 +83,27 @@ public class ManageController {
         return "success";
     }
 
+    /*
+    http://localhost:8082/spuSaleAttrList?spuId=59
+    http://localhost:8082/spuImageList?spuId=59
+     */
+
+
+    //获取sku的图片列表
+    @RequestMapping("spuImageList")
+    public List<SpuImage> getSpuImageList(String spuId){
+       return manageService.getSpuImageList(spuId);
+    }
+    //获取平台属性动态列表的值 http://localhost:8082/spuSaleAttrList?spuId=59
+    @RequestMapping("spuSaleAttrList")
+    public List<SpuSaleAttr> getSpuSaleAttrList(String spuId){
+
+        List<SpuSaleAttr> spuSaleAttrList = manageService.getSpuSaleAttrList(spuId);
+        System.out.println(spuSaleAttrList+"哈哈哈哈哈哈哈");
+        return spuSaleAttrList;
+    }
+
+
+    //http://localhost:8082/saveSkuInfo
+    //最终的Sku保存
 }

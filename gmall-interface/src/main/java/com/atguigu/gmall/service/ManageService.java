@@ -26,4 +26,17 @@ public interface ManageService {
 
     //保存spu的接口
     public void saveSpuInfo(SpuInfo spuInfo);
+
+     /*
+    http://localhost:8082/spuSaleAttrList?spuId=59
+    http://localhost:8082/spuImageList?spuId=59
+     */
+    //根据spuId来获取spu中的所有的图片
+    public List<SpuImage> getSpuImageList(String spuId);
+
+    //获取所有的sku
+    List<SpuSaleAttr> getSpuSaleAttrList(String spuId);
+
+    //sku属性集合保存
+    public void saveSkuInfo(SkuInfo skuInfo);
 }
