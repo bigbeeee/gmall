@@ -39,4 +39,13 @@ public interface ManageService {
 
     //sku属性集合保存
     public void saveSkuInfo(SkuInfo skuInfo);
+
+    //根据SkuId查询SkuInfo数据
+    SkuInfo getSkuInfo(String skuId);
+
+    List<SkuImage> getSkuImageBySkuId(String skuId);
+    //获取商品的Spu以及Sku
+    List<SpuSaleAttr> getSpuSaleAttrListCheckBySku(SkuInfo skuInfo);
+    //页面中获得得所有选中的销售属性
+    List<SkuSaleAttrValue> getSkuSaleAttrValueListBySpu(String spuId);
 }
